@@ -117,14 +117,15 @@
   }
   .photo-panel .ph-content{ position:relative; padding: 22px; width:100%; }
   .photo-panel .ph-avatar{
-    width: 100%; aspect-ratio: 1/1; border-radius: 14px; margin-bottom: 16px;
+    width: 100%; height: 0; padding-top: 90%; position: relative; border-radius: 14px; margin-bottom: 16px;
     background: linear-gradient(160deg,#1a1d27,#0d0e13);
     border: 1px solid var(--border-soft);
-    display:flex; align-items:center; justify-content:center;
-    color: var(--text-faint); font-size: 13px; text-align:center; font-family: var(--mono);
     overflow: hidden;
   }
-  .photo-panel .ph-avatar img{ width:100%; height:100%; object-fit: contain; object-position: center center; display:block; background: #14161E; }
+  .photo-panel .ph-avatar img{
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover; object-position: center top; display:block;
+  }
   .ph-name{ font-family: var(--display); font-weight:600; font-size:16px; }
   .ph-role{ font-size:12.5px; color: var(--text-dim); margin-top:3px; }
 
